@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>task2</title>
+</head>
+<body>
+<h1>task</h1>
+</body>
+</html>
+<script type="text/javascript">
+	function reverseWords(sentence) {
+  return sentence
+    .split(/\s+/) 
+    .map(word => {
+    
+      return word.split('').reverse().join('');
+    })
+    .join(' '); 
+}
+
+// Example usage:
+const inputSentence = "This is a sunny day";
+const reversedSentence = reverseWords(inputSentence);
+console.log(reversedSentence); 
+</script>

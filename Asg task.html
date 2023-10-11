@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="./css/task.css">
+</head>
+<body>
+<center>
+	
+	<br>
+	<br>
+	<table cellpadding="30"class="table" width="30%">
+    
+   <tr>
+   	<th colspan="3" bgcolor="white" align="left" width="20">56+2</th>
+   	<th bgcolor="teal">AC</th>
+   </tr>
+    
+    <tr class="tableEle2">
+    	<th bgcolor="black"onclick="calculate(event)">9</th>
+    	<th onclick="calculate(event)">8</th>
+    	<th onclick="calculate(event)">7</th>
+    	<th bgcolor="gray" onclick="calculate(event)">+</th>
+
+    </tr>
+    <tr class="tableEle2">
+			<th onclick="calculate(event)">4</th>
+			<th onclick="calculate(event)">5</th>
+			<th onclick="calculate(event)">6</th>
+			<th  bgcolor="gray" onclick="calculate(event)">-</th>
+			
+		</tr>
+		<tr class="tableEle2">
+			<th onclick="calculate(event)">1</th>
+			<th onclick="calculate(event)">2</th>
+			<th onclick="calculate(event)">3</th>
+			<th bgcolor="gray"onclick="calculate(event)">%</th> 
+			
+		</tr>
+		
+		<tr class="tableEle3">
+			<th onclick="calculate(event)">.</th>
+			<th>0</th>
+			<th onclick="resetCalc()">=</th>
+			<th bgcolor="gray" onclick="calculate(event)">*</th>
+		</tr>
+	</table>
+</center>
+</body>
+</html>
+<script type="text/javascript">
+const mrs= document.getElementById('mrs');
+
+let calStr='';
+ function calculate(e) {
+   calStr+= e.target.innerHTML;
+   mrs.innerHTML = calStr; 
+ }
+   function res(){
+   	const rs= eval(calStr);
+    calStr=string(rs);
+    mrs.innerHTML=rs;
+ 	
+ }
+ function resetCalc(){
+ 	calStr='0';
+ 	mrs.innerHTML=calStr
+  
+ }
+	
+</script>
